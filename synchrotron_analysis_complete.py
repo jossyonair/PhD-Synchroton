@@ -1,50 +1,73 @@
-# Synchrotron X-ray Analysis Framework
+class MetadataParser:
+    """Parses .metadata files with section-based parsing."""
+    def __init__(self, filepath: str):
+        self.filepath = filepath
+        self.data = self.parse_metadata()
 
-## Overview
-This script provides a complete framework for synchrotron X-ray analysis, including data processing, analysis, and visualization.
+    def parse_metadata(self):
+        # Logic for parsing the .metadata file
+        pass
 
-## Features
-- Data loading from various formats
-- Preprocessing routines
-- Peak detection algorithms
-- Statistical analysis
-- Interactive visualization options
 
-## Dependencies
-- numpy
-- pandas
-- matplotlib
-- scipy
-- h5py
+class IntensityAnalyzer:
+    """Performs histogram analysis, peak detection, and statistics."""
+    def __init__(self, data: list):
+        self.data = data
 
-## Usage
-To use this framework, simply run the script and follow the prompts:
-
-```python
-if __name__ == '__main__':
-    # Load your data
-    data = load_data('your_data_file.h5')
+    def analyze_histogram(self):
+        # Logic for histogram analysis
+        pass
     
-    # Perform preprocessing
-    processed_data = preprocess(data)
-    
-    # Conduct analysis
-    results = analyze(processed_data)
-    
-    # Visualize results
-    visualize(results)
-```
+    def calculate_statistics(self):
+        # Statistics methods: mean, median, std, skewness, kurtosis, percentiles
+        pass
 
-## Functions
 
-### load_data(file_path)
-Loads data from the specified file path.
+class CentroidCalculator:
+    """Calculates intensity-weighted centroids and related metrics."""
+    def __init__(self, intensity_data: list):
+        self.intensity_data = intensity_data
 
-### preprocess(data)
-Applies preprocessing to the input data.
+    def calculate_centroid(self):
+        # Logic for calculating centroids
+        pass
 
-### analyze(data)
-Conducts the analysis on the data.
 
-### visualize(results)
-Generates visualizations based on analysis results.
+class CrystallographicAnalyzer:
+    """Handles ring detection and d-spacing calculations."""
+    def __init__(self, detector_geometry: dict):
+        self.detector_geometry = detector_geometry
+
+    def detect_rings(self):
+        # Logic for ring detection
+        pass
+
+    def calculate_d_spacing(self):
+        # Logic for calculating d-spacing
+        pass
+
+
+class SynchrotronAnalyzer:
+    """Main class orchestrating all analyses."""
+    def __init__(self, metadata_parser: MetadataParser):
+        self.metadata_parser = metadata_parser
+
+    def analyze_single_image(self, image_path: str):
+        # Logic for single image analysis
+        pass
+
+    def process_batch(self, image_paths: list):
+        # Logic for batch processing
+        pass
+
+    def downsample_image(self, image):
+        # Logic for downsampling large images
+        pass
+
+    def export_results_to_csv(self, results: dict, filename: str):
+        # Logic for exporting results to CSV
+        pass
+
+    def export_results_to_hdf5(self, results: dict, filename: str):
+        # Logic for exporting results to HDF5
+        pass
